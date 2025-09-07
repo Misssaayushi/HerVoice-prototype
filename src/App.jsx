@@ -10,6 +10,7 @@ import ImageUpload from './components/ImageUpload';
 import Submission from './components/Submission';
 import UserCredential from './components/UserCredential';
 import AiScan from './components/AiScan'; // Import the AiScan component
+import HowItWorks from './components/HowItWorks'; // Import the HowItWorks component
 
 // Placeholder components for the other pages
 const CaseStatus = () => <div className="page-container"><h2>Case Status</h2><p>Check the status of your case here.</p></div>;
@@ -121,7 +122,8 @@ function App() {
       <div className="App">
         <Navbar onHomeClick={handleHomeClick} />
         <Routes>
-          <Route path="/*" element={<AppContent homeClicked={homeClicked} onHomeClick={resetHomeClick} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />} />
+          <Route path="/" element={<AppContent homeClicked={homeClicked} onHomeClick={resetHomeClick} isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/case-status" element={<CaseStatus />} />
           <Route path="/legal-toolkit" element={<LegalToolkit />} />
           <Route path="/emotional-support" element={<EmotionalSupport />} />

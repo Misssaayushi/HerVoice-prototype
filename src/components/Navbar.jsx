@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import { FaHome, FaFileAlt, FaGavel, FaHeart } from 'react-icons/fa';
+import { FaHome, FaFileAlt, FaGavel, FaHeart, FaInfoCircle } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 
 const Navbar = ({ onHomeClick }) => {
@@ -14,6 +14,7 @@ const Navbar = ({ onHomeClick }) => {
       </div>
       <ul className="navbar-links">
         <li><Link to="/" onClick={onHomeClick}><FaHome />Home</Link></li>
+        <li><Link to="/how-it-works"><FaInfoCircle />How it Works</Link></li>
         <li><Link to="/case-status"><FaFileAlt />Case Status</Link></li>
         <li><Link to="/legal-toolkit"><FaGavel />Legal Toolkit</Link></li>
         <li><Link to="/emotional-support"><FaHeart />Emotional Support</Link></li>

@@ -1,22 +1,47 @@
+
 # HerVoice Application Blueprint
 
 ## Overview
 
-HerVoice is a web application designed to empower and support individuals facing online harassment and threats. The application provides a secure and user-friendly platform to report incidents, access legal and emotional support resources, and track the status of their case.
+HerVoice is a web application designed to provide a safe and secure way for users to report online harassment and abuse. The platform allows users to submit evidence of abuse, which is then processed to protect their privacy while enabling action to be taken against perpetrators. This blueprint documents the project's design, features, and technical implementation.
 
-## Implemented Features
+## Current Features & Design
 
-*   **Navigation Bar:** A responsive navigation bar with links to Home, Case Status, Legal Toolkit, and Emotional Support. The "Home" button now resets the application to the initial state.
-*   **User Authentication Flow:** A user authentication flow that begins when the user clicks the "Get Started" button. The user is presented with a login form and the option to create an account.
-*   **Sign-up Form:** A sign-up form that collects the user's first name, last name, email, password, and phone number.
-*   **Hero Section:** A compelling hero section with a brief introduction to the application and a call to action to "Get Started."
-*   **Multi-step Reporting Form:** A multi-step form to report incidents, including details about the threat, the suspect, and the ability to upload evidence.
-*   **Component-based Architecture:** The application is built using a component-based architecture with React, making it modular and maintainable.
-*   **Routing:** The application uses `react-router-dom` for routing, allowing for a seamless single-page application experience.
-*   **Styling:** The application uses a combination of CSS and a component-specific styling approach to create a visually appealing and user-friendly interface.
-*   **Linting:** The application uses ESLint to enforce code quality and consistency.
-*   **Prop-types:** The application uses `prop-types` to validate the props passed to each component.
+### "How It Works" Page
 
-## Current State
+**Purpose:** To provide a clear, interactive, and visually engaging explanation of the HerVoice reporting process, building user trust by demonstrating how their data is handled and what actions are taken.
 
-The application is in a stable state with the core features implemented. The user authentication flow has been added, and the application is ready for Firebase integration. All linting errors have been resolved.
+**URL:** `/how-it-works`
+
+**Design & Styling:**
+
+*   **Layout:** A centered, single-column vertical flowchart that guides the user step-by-step through the process.
+*   **Aesthetics:** Modern and clean design with a premium feel.
+    *   **Background:** A light gray background with a subtle noise texture (`#f8f9fa`).
+    *   **Typography:** Headings use a bold, modern font (`Inter`), with a large, prominent main title.
+    *   **Color Palette:** The primary color is a reassuring blue (`#4A90E2`), used for highlights and key elements. The "Match Found" path is highlighted in green (`#22c55e`), and the "No Match" path is in red (`#ef4444`).
+    *   **Cards (`.flow-step`):** White cards with rounded corners, a subtle border, and a soft shadow that lifts on hover. Each card has a consistent maximum width (`700px`) for a uniform appearance.
+    *   **Icons:** Each step features a clear and relevant icon housed within a colored circular container, visually representing the action described.
+*   **Arrows & Connectors:** Dark, visible arrows (`#94a3b8`) with a height of `h-12` clearly connect the cards, guiding the user through the flowchart.
+
+**Interactive Elements:**
+
+1.  **Decision Point:** Step 5 ("WhatsApp Checks its Database") contains two buttons:
+    *   **"Match Found":** A green button that, when clicked, reveals the "Action is Taken" path.
+    *   **"No Match":** A light-colored button that, when clicked, reveals the "No Match Found" path.
+2.  **Dynamic Paths:**
+    *   By default, the "Match Found" (green) path is shown.
+    *   Clicking the buttons triggers a smooth hide-and-show animation, revealing the selected outcome while hiding the other.
+    *   The branching lines from the decision point change color to match the selected path (green for "yes," red for "no"), providing a clear visual connection.
+
+**Component Breakdown:**
+
+*   `src/pages/HowItWorksPage.jsx`: The main page component that renders the layout.
+*   `src/components/HowItWorks.jsx`: The core component containing the flowchart logic and structure.
+*   `src/components/HowItWorks.css`: The stylesheet defining all the visual elements described above.
+
+## Development Plan
+
+**Status:** Completed.
+
+The "How It Works" page has been implemented according to the user's specifications. The design is visually polished, the interactivity is functional, and the flowchart clearly communicates the reporting process.

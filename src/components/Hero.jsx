@@ -14,7 +14,7 @@ const Hero = ({ onGetStarted, isAuthenticated, onAiScan }) => {
           {isAuthenticated ? (
             <div className="hero-buttons">
               <button onClick={onGetStarted} className="btn btn-primary">
-                How this works
+                About US
               </button>
               <button onClick={onAiScan} className="btn btn-secondary">
                 AI Scan
