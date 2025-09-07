@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const ThreatenedForm = ({ onFormSubmit }) => {
   const [phone, setPhone] = useState('');
@@ -26,10 +27,14 @@ const ThreatenedForm = ({ onFormSubmit }) => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="btn-primary">Submit</button>
       </form>
     </div>
   );
+};
+
+ThreatenedForm.propTypes = {
+  onFormSubmit: PropTypes.func.isRequired
 };
 
 export default ThreatenedForm;

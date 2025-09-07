@@ -1,50 +1,22 @@
-
-# herVoice - Online Image Safety Platform Prototype
+# HerVoice Application Blueprint
 
 ## Overview
 
-This document outlines the plan for building a prototype of the "herVoice" online image safety platform. The prototype will simulate the user flow for a victim of image-based abuse, from uploading an image to taking action. It will use a fake AI check to determine the outcome.
+HerVoice is a web application designed to empower and support individuals facing online harassment and threats. The application provides a secure and user-friendly platform to report incidents, access legal and emotional support resources, and track the status of their case.
 
-## Core Features
+## Implemented Features
 
-*   **Image Upload:** A feature for the user to upload an image for a "safety check."
-*   **Fake AI Scan:** A simulated AI scan that will randomly determine if the image is "found" online.
-*   **"Image Found" Flow:**
-    *   If the image is "found," a form will appear for the user to enter the blackmailer's contact information.
-    *   A confirmation message will be shown to simulate sending a warning.
-*   **"Image Not Found" Flow:**
-    *   If the image is not found, the user will be asked if they still feel threatened.
-    *   If they do, a form will appear for them to enter their contact information for support.
-    *   If they don't, an awareness message will be displayed.
+*   **Navigation Bar:** A responsive navigation bar with links to Home, Case Status, Legal Toolkit, and Emotional Support. The "Home" button now resets the application to the initial state.
+*   **User Authentication Flow:** A user authentication flow that begins when the user clicks the "Get Started" button. The user is presented with a login form and the option to create an account.
+*   **Sign-up Form:** A sign-up form that collects the user's first name, last name, email, password, and phone number.
+*   **Hero Section:** A compelling hero section with a brief introduction to the application and a call to action to "Get Started."
+*   **Multi-step Reporting Form:** A multi-step form to report incidents, including details about the threat, the suspect, and the ability to upload evidence.
+*   **Component-based Architecture:** The application is built using a component-based architecture with React, making it modular and maintainable.
+*   **Routing:** The application uses `react-router-dom` for routing, allowing for a seamless single-page application experience.
+*   **Styling:** The application uses a combination of CSS and a component-specific styling approach to create a visually appealing and user-friendly interface.
+*   **Linting:** The application uses ESLint to enforce code quality and consistency.
+*   **Prop-types:** The application uses `prop-types` to validate the props passed to each component.
 
-## Design
+## Current State
 
-*   **Theme:** The user interface will use a blue color palette to create a sense of trust and security.
-*   **Layout:** The main content will be centered on the page for a clean and focused user experience.
-*   **Styling:** Modern and clean design with a professional look and feel.
-
-## Technology Stack
-
-*   **Frontend:** React (using Vite)
-*   **Styling:** CSS
-
-## Plan
-
-1.  **Project Setup:**
-    *   Create a `blueprint.md` file to document the project.
-    *   Structure the React project with a `components` folder for UI components.
-2.  **Component Development:**
-    *   `App.jsx`: The main application component to manage state and logic.
-    *   `ImageUpload.jsx`: Component for the image upload functionality.
-    *   `BlackmailerForm.jsx`: Form for the blackmailer's contact information.
-    *   `ThreatenedForm.jsx`: Form for the victim's contact information.
-    *   `AwarenessMessage.jsx`: Component to display the awareness message.
-3.  **Styling:**
-    *   Create a CSS file with styles for all components, focusing on the blue theme and centered layout.
-4.  **Implementation:**
-    *   Implement the state management in `App.jsx` to handle the different stages of the user flow.
-    *   Integrate the components into `App.jsx`.
-    *   Implement the "fake AI check" using a random number generator.
-5.  **Review and Refine:**
-    *   Test the application to ensure all features work as expected.
-    *   Refine the UI and user experience based on the initial implementation.
+The application is in a stable state with the core features implemented. The user authentication flow has been added, and the application is ready for Firebase integration. All linting errors have been resolved.

@@ -1,0 +1,24 @@
+.submission-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.submission-container h2 {
+  color: var(--primary-purple-dark);
+  margin-bottom: 1rem;
+}
+
+.submission-container p {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.submission-container .btn-primary {
+  margin-top: 1rem;
+}

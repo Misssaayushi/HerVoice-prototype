@@ -1,0 +1,133 @@
+.ai-scan-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 2rem;
+  }
+  
+  .ai-scan-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .ai-scan-card.found {
+    border: 1px solid rgba(255, 77, 77, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(255, 77, 77, 0.2);
+  }
+
+  .ai-scan-card.safe {
+    border: 1px solid rgba(40, 167, 69, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(40, 167, 69, 0.2);
+  }
+  
+  .ai-scan-title {
+    font-size: 2rem;
+    color: #00aaff;
+    margin-bottom: 1rem;
+  }
+
+  .ai-scan-title-found {
+    font-size: 2.2rem;
+    color: #ff4d4d;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .ai-scan-title-safe {
+    font-size: 2.2rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .ai-scan-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .ai-scan-subtitle-found {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #ff9999;
+    font-weight: 500;
+  }
+
+  .ai-scan-subtitle-safe {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #78dca2;
+    font-weight: 500;
+  }
+
+  .ai-scan-question {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+  
+  .file-upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  #file-upload {
+    display: none;
+  }
+
+  .btn-file-upload {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #fff;
+  }
+
+  .btn-file-upload:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .file-name {
+    margin-left: 1rem;
+    font-style: italic;
+  }
+  
+  .loader {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #00aaff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    color: #fff;
+  }
+  
+  .checkbox-container input {
+    margin-right: 0.5rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

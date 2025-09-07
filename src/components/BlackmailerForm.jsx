@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const BlackmailerForm = ({ onFormSubmit }) => {
   const [suspectName, setSuspectName] = useState('');
@@ -26,10 +27,14 @@ const BlackmailerForm = ({ onFormSubmit }) => {
           value={suspectContact}
           onChange={(e) => setSuspectContact(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="btn-primary">Submit</button>
       </form>
     </div>
   );
+};
+
+BlackmailerForm.propTypes = {
+  onFormSubmit: PropTypes.func.isRequired,
 };
 
 export default BlackmailerForm;

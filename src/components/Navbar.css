@@ -2,11 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #007bff;
+  background: linear-gradient(90deg, var(--primary-purple-dark), var(--secondary-blue-dark));
   padding: 1rem 2rem;
   color: white;
   box-sizing: border-box;
-  width: 100vw; /* Ensure it spans the full width of its container */
+  width: 100vw;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-logo {
@@ -44,10 +45,11 @@
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-  text-decoration: underline;
+  color: var(--secondary-blue-lighter);
 }
 
 .navbar-links svg {
